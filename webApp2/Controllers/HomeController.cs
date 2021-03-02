@@ -60,11 +60,17 @@ namespace webApp2.Controllers
         {
             // Dan toi link ben ngoai
             return Redirect("https://www.youtube.com/watch?v=SCUo9vYSu6g");
-            // Dang nghe bai nay chill chill nen dung
+            // Dang nghe bai nay chill chill nen bo vao thui
         }
         public RedirectToRouteResult Link2()
         {
             return RedirectToRoute(new { controller = "Home", action = "GetRequirement" });
+        }
+        public HttpStatusCodeResult HttpRS()
+        {
+            //return new HttpStatusCodeResult(System.Net.HttpStatusCode.Unauthorized, "Lin not found :((");
+            //return new HttpUnauthorizedResult("Lin not found :((");
+            return HttpNotFound("Lin not found :((");
         }
     }
 }
