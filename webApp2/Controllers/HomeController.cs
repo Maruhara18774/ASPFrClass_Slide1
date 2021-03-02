@@ -30,5 +30,17 @@ namespace webApp2.Controllers
         {
             return PartialView("_Menu");
         }
+        public FileResult GetRequirement()
+        {
+            // return content of file text
+            //return File(System.IO.File.ReadAllBytes(Server.MapPath("~/Files/Requirement.txt")), "text");
+            
+            // return action download file text
+            return File(Url.Content("~/Files/Requirement.txt"), "text", "download.txt");
+        }
+        public JsonResult GetFriendsList()
+        {
+            return Json(System.IO.File.ReadAllText(Server.MapPath("~/Files/FriendsList.json")), "text",JsonRequestBehavior.AllowGet);
+        }
     }
 }
