@@ -33,14 +33,38 @@ namespace webApp2.Controllers
         public FileResult GetRequirement()
         {
             // return content of file text
-            //return File(System.IO.File.ReadAllBytes(Server.MapPath("~/Files/Requirement.txt")), "text");
+            return File(System.IO.File.ReadAllBytes(Server.MapPath("~/Files/Requirement.txt")), "text");
             
             // return action download file text
-            return File(Url.Content("~/Files/Requirement.txt"), "text", "download.txt");
+            //return File(Url.Content("~/Files/Requirement.txt"), "text", "download.txt");
         }
         public JsonResult GetFriendsList()
         {
-            return Json(System.IO.File.ReadAllText(Server.MapPath("~/Files/FriendsList.json")), "text",JsonRequestBehavior.AllowGet);
+            // 1. Return custom json file
+            //return Json(System.IO.File.ReadAllText(Server.MapPath("~/Files/FriendsList.json")), "text",JsonRequestBehavior.AllowGet);
+            
+            // 2. Return new json file
+            return Json(new { name = "Linh", age = 18 }, JsonRequestBehavior.AllowGet);
+            // Luu y: Khi khong co cum dang sau new Json, ma se ko dc thuc thi vi asp auto block
+        }
+        public JavaScriptResult AccessPage()
+        {
+            // 1. Class JavaScript ben duoi la cach su dung bth
+            return JavaScript("alert('Hello Javascript Result');");
+
+            // 2. Con cai nay lam code JS thuc thi
+            // *Kieu tra ve JavaScriptResult --> ActionResult
+            //return Content("<script> alert('Hello Javascript Result'); </script>");
+        }
+        public RedirectResult Link1()
+        {
+            // Dan toi link ben ngoai
+            return Redirect("https://www.youtube.com/watch?v=SCUo9vYSu6g");
+            // Dang nghe bai nay chill chill nen dung
+        }
+        public RedirectToRouteResult Link2()
+        {
+            return RedirectToRoute(new { controller = "Home", action = "GetRequirement" });
         }
     }
 }

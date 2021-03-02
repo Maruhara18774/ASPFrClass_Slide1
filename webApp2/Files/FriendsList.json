@@ -4,17 +4,17 @@
       "name": "Cinder",
       "age": 20,
       "gender": "Female"
-    }
+    },
     "Parner": {
       "name": "John",
       "age": 25,
       "gender": "Male"
-    }
+    },
     "Others": {
       "name": "Mujun",
       "age": 18,
       "gender": "Female",
-      "type":  "School friend"
+      "type": "School friend"
     }
   }
 }
