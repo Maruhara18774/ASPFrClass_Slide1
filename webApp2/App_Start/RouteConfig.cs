@@ -19,11 +19,18 @@ namespace webApp2
                 defaults: new { controller = "MyPage", action = "Index", id = UrlParameter.Optional }
                 );
             */
+            /*
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            */
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "GiaiBai", action = "XinChao", id = UrlParameter.Optional }
+                );
             
         }
     }

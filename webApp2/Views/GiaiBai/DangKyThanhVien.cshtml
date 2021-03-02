@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "DangKyThanhVien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    // <input type="text" placeholder="Nhập họ tên ... " />
+}
+
+<h2>DangKyThanhVien</h2>
+<form method="post">
+    <table>
+        <tr>
+            <td>
+                <p>Họ và tên: </p>
+            </td>
+            <td>
+                <input id="name" name="name" type="text" placeholder="Nhập họ tên ... " />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Email: </p>
+            </td>
+            <td>
+                <input id="email" name="email" type="email" placeholder="Nhập email ... " />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Số điện thoại: </p>
+            </td>
+            <td>
+                <input id="sdt" name="sdt" type="tel" placeholder="Nhập số điện thoại ... " />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Bạn có tham gia tiệc không? </p>
+            </td>
+            <td>
+                <select id="confirm" name="confirm">
+                    <option>Tham gia</option>
+                    <option>Không tham gia</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">Gửi thông tin</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
