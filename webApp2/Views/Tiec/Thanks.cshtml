@@ -1,0 +1,17 @@
+﻿@model webApp2.Models.KhachMoi
+
+@{
+    ViewBag.Title = "Thanks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thanks for submit @Model.Ten</h2>
+@if (Model.XacNhanThamGia == true)
+{
+    <h4>Hẹn gặp bạn tại buổi tiệc.</h4>
+}
+else
+{
+    <h4>Cảm ơn đã nhập thông tin.</h4>
+}
+

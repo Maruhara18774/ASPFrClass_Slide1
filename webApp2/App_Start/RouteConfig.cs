@@ -29,7 +29,7 @@ namespace webApp2
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "GiaiBai", action = "XinChao", id = UrlParameter.Optional }
+                defaults: new { controller = "Tiec", action = "GetForm", id = UrlParameter.Optional }
                 );
             
         }

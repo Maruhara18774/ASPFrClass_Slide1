@@ -1,0 +1,27 @@
+﻿@model webApp2.Models.KhachMoi
+
+@{
+    ViewBag.Title = "GetForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Đăng ký tiệc</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x => x.Ten)
+    @Html.TextBoxFor(x => x.Ten)
+    <br />
+    @Html.LabelFor(x => x.Sdt)
+    @Html.TextBoxFor(x => x.Sdt)
+    <br />
+    @Html.LabelFor(x => x.Email)
+    @Html.TextBoxFor(x => x.Email)
+    <br />
+    @Html.DropDownListFor(x => x.XacNhanThamGia, new[]{
+    new SelectListItem() { Text="Sẽ tham gia",Value=bool.TrueString},
+    new SelectListItem() { Text="Không tham gia tham gia",Value=bool.FalseString} },
+    "Vui lòng chọn")
+    <br />
+    <button type="submit">Gửi</button>
+}
+

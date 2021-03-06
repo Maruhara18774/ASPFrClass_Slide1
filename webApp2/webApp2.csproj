@@ -123,6 +123,7 @@
     <Compile Include="Controllers\GiaiBaiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyPageController.cs" />
+    <Compile Include="Controllers\TiecController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -173,6 +174,8 @@
     <Content Include="Views\GiaiBai\XinChao.cshtml" />
     <Content Include="Views\GiaiBai\DangKyThanhVien.cshtml" />
     <Content Include="Views\GiaiBai\DangKyThanhCong.cshtml" />
+    <Content Include="Views\Tiec\GetForm.cshtml" />
+    <Content Include="Views\Tiec\Thanks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
