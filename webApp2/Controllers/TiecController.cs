@@ -12,12 +12,20 @@ namespace webApp2.Controllers
         [HttpGet]
         public ActionResult GetForm()
         {
+            
             return View();
         }
         [HttpPost]
         public ActionResult GetForm(Models.KhachMoi myGuest)
         {
-            return View("Thanks", myGuest);
+            if (ModelState.IsValid)
+            {
+                return View("Thanks", myGuest);
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

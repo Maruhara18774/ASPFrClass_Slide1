@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace webApp2.Models
 {
@@ -14,6 +15,7 @@ namespace webApp2.Models
         private bool xacNhanThamGia;
 
         // Get set
+        [Required(ErrorMessage ="Xin nhập tên")]
         public string Ten { get => ten; set => ten = value; }
         public string Sdt { get => sdt; set => sdt = value; }
         public string Email { get => email; set => email = value; }

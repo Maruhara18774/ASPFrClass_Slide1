@@ -8,6 +8,7 @@
 <h2>Đăng ký tiệc</h2>
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary()
     @Html.LabelFor(x => x.Ten)
     @Html.TextBoxFor(x => x.Ten)
     <br />
